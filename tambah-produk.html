@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Produk</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center ">
+            <a href="index.html" class="btn btn-primary btn-sm mb-3">Kembali</a>
+            <h2 class="text-center mb-4">Tambah Produk</h2>
+        </div>
+       
+        <div class="card mb-4">
+            <div class="card-header bg-success text-white">Form tambah Produk</div>
+            <div class="card-body">
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="product_name">Nama Produk:</label>
+                        <input type="text" class="form-control" id="product_name" name="product_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Deskripsi:</label>
+                        <textarea class="form-control" id="description" name="description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="harga">Harga:</label>
+                        <input type="number" class="form-control" id="harga" name="harga" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stok">Stok:</label>
+                        <input type="number" class="form-control" id="stok" name="stok" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="kategori_id">Kategori ID:</label>
+                        <input type="number" class="form-control" id="kategori_id" name="kategori_id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Gambar:</label>
+                        <input type="file" class="form-control-file" id="image" name="image">
+                    </div>
+                    <button type="submit" class="btn btn-success" id="simpan">Simpan</button>
+                </form>
+            </div>
+        </div>
+     <div>
+
+     </div>
+    </div>
+    <script src="/js/tambah.js"></script>
+</body>
+</html>

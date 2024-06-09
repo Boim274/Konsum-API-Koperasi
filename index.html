@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koperasi</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand h2 {
+            margin: 0;
+            white-space: nowrap;
+        }
+        .navbar-nav .nav-link {
+            white-space: nowrap;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            font-size: 1.25rem; /* Adjust the size as needed */
+        }
+        /* Ensure navbar text remains white */
+        .navbar .nav-link {
+            color: white;
+        }
+
+        /* Change color to red on hover */
+        .navbar .nav-link:hover {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success shadow">
+        <a class="navbar-brand" href="#">
+           <h2 class="text-white">Koperasi.</h2> 
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="tambah-kategori.html">Tambah Kategori</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="tambah-produk.html">Tambah Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="lihatProduk.html">Lihat Produk</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="login.html">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1>Welcome to Koperasi</h1>
+                <p>Use the navigation bar to add or view products.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="tambah-kategori.html">Tambah Kategori</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="tambah-produk.html">Tambah Produk</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="lihatProduk.html">Lihat Produk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

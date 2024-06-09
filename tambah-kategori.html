@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tambah Kategori</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Tambah Kategori</h1>
+        <form id="kategoriForm">
+            <div class="form-group">
+                <label for="name">Nama Kategori:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Deskripsi:</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Tambah</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#kategoriForm').on('submit', function(e) {
+                e.preventDefault();
+
+                var formData = new FormData();
+                formData.append('name', $('#name').val());
+                formData.append('description', $('#description').val());
+
+                $.ajax({
+                    url: 'http://127.0.0.1:8000/api/admin/kategoris',
+                    type: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer ' + token,
+                        'Content-Type': false,
+                        'Process-Data': false
+                    },
+                    data: formData,
+                    success: function(response) {
+                        alert('Data berhasil dimasukkan ke database');
+                        window.location.href = 'tambah-kategori.html';
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Error: ' + xhr.responseJSON.message);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

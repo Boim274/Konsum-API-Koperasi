@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Produk</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .thead {
+            background-color: #00a01b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="d-flex justify-content-between align-items-center ">
+            <a href="index.html" class="btn btn-primary btn-sm mb-3">Kembali</a>
+            <h1 class="text-center mb-4">List Produk</h1>
+        </div>
+        <table class="table table-bordered" id="productTable">
+            <thead class="thead">
+                <tr>
+                    <th>no</th>
+                    <th>Nama Produk</th>
+                    <th>Deskripsi</th>
+                    <th>Harga</th>
+                    <th>Stok</th>
+                    <th>Kategori ID</th>
+                    <th>Gambar</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="product-table">
+                <!-- Data produk akan dimuat di sini -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/tambah.js"></script>
+</body>
+</html>
